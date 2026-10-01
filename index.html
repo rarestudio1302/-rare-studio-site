@@ -68,14 +68,30 @@ header{position:sticky;top:0;z-index:10;background:rgba(251,249,247,.9);backdrop
 .head-row p{max-width:36ch;opacity:.75;font-size:15px;padding-bottom:4px}
 
 /* Serviços */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.s-card{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;transition:border-color .15s}
-.s-card:hover{border-color:var(--lilac)}
-.s-thumb{width:52px;height:52px;border-radius:10px;background:linear-gradient(145deg,var(--blush),var(--cream));flex:none;display:flex;align-items:center;justify-content:center;color:var(--lilac-deep);font-size:15px}
-.s-card span{font-size:15px;font-weight:500;flex:1}
-.s-card em{font-style:normal;opacity:.5}
-@media (max-width:900px){.services{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.services{grid-template-columns:1fr}}
+.service-groups{display:flex;flex-direction:column;gap:48px}
+.s-group-title{font-family:'Fraunces',serif;font-size:20px;font-weight:500;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.s-rows{display:flex;flex-direction:column;gap:10px}
+.s-row{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;transition:border-color .15s}
+.s-row:hover{border-color:var(--lilac)}
+.s-info h4{font-size:15px;font-weight:600}
+.s-info p{font-size:13px;opacity:.65;margin-top:3px;max-width:52ch}
+.s-price{font-size:14.5px;font-weight:600;color:var(--lilac-deep);white-space:nowrap;display:flex;align-items:center;gap:10px;flex:none}
+.s-price em{font-style:normal;opacity:.6;font-weight:500}
+.s-row-static{cursor:default}
+.s-row-static:hover{border-color:var(--line)}
+.s-combos{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.s-combos-label{font-size:12px;letter-spacing:.04em;color:var(--lilac-deep);text-transform:uppercase;margin-bottom:2px;display:block}
+.s-row-combo{background:var(--panel);border-color:transparent;padding:12px 20px}
+.s-row-combo .s-info h4{font-size:14px;font-weight:500}
+.s-grid-small{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.s-chip{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .15s}
+.s-chip:hover{border-color:var(--lilac)}
+.s-chip span{font-size:13.5px;font-weight:500}
+.s-chip b{font-size:13px;color:var(--lilac-deep)}
+@media (max-width:760px){
+  .s-row{flex-wrap:wrap}
+  .s-grid-small{grid-template-columns:repeat(2,1fr)}
+}
 
 /* Agendamentos */
 .book-section{background:var(--panel)}
@@ -207,16 +223,55 @@ footer{border-top:1px solid var(--line);padding:44px 0}
           <p>Do cuidado das unhas ao brilho do teu sorriso, tudo o que precisas num só lugar.</p>
         </div>
       </div>
-      <div class="services">
-        <div class="s-card"><div class="s-thumb">✦</div><span>Gel Nails</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Verniz Gel</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Acrygel</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Manicure Feminina/Masculina</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Pedicure</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Spa Mãos</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Nail Art</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>IBX</span><em>→</em></div>
-        <div class="s-card"><div class="s-thumb">✦</div><span>Tooth Gems</span><em>→</em></div>
+      <div class="service-groups">
+        <div class="s-group">
+          <h3 class="s-group-title">Unhas</h3>
+          <div class="s-rows">
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Gel/Acrygel." target="_blank"><div class="s-info"><h4>Gel/Acrygel</h4><p>Construção da unha em gel ou acrygel, acabamento resistente e duradouro</p></div><div class="s-price">desde 25€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Verniz%20Gel." target="_blank"><div class="s-info"><h4>Verniz Gel</h4><p>Aplicação de verniz gel nas unhas naturais</p></div><div class="s-price">20€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Manicure%20Feminina%20e%20Masculina." target="_blank"><div class="s-info"><h4>Manicure Feminina e Masculina</h4><p>Tratamento e cuidado das unhas das mãos</p></div><div class="s-price">10€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Verniz%20Gel%20P%C3%A9s." target="_blank"><div class="s-info"><h4>Verniz Gel Pés</h4><p>Verniz gel aplicado nos pés</p></div><div class="s-price">20€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Spa%20M%C3%A3os." target="_blank"><div class="s-info"><h4>Spa Mãos</h4><p>Esfoliação e hidratação profunda das mãos</p></div><div class="s-price">15€<em>→</em></div></a>
+            <div class="s-row s-row-static"><div class="s-info"><h4>Nail Art</h4><p>Desenhos e detalhes personalizados nas unhas</p></div><div class="s-price">sob orçamento</div></div>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20IBX." target="_blank"><div class="s-info"><h4>IBX</h4><p>Tratamento de fortalecimento e reparação da unha natural</p></div><div class="s-price">15€<em>→</em></div></a>
+          </div>
+          <div class="s-combos"><span class="s-combos-label">Combos</span>
+            <a class="s-row s-row-combo" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Gel/Acrygel%20%2B%20Verniz%20Gel%20P%C3%A9s." target="_blank"><div class="s-info"><h4>Gel/Acrygel + Verniz Gel Pés</h4></div><div class="s-price">valor do serv. mãos + 15€<em>→</em></div></a>
+            <a class="s-row s-row-combo" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Verniz%20Gel%20M%C3%A3os%20e%20P%C3%A9s." target="_blank"><div class="s-info"><h4>Verniz Gel Mãos e Pés</h4></div><div class="s-price">35€<em>→</em></div></a>
+            <a class="s-row s-row-combo" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20M%C3%A3os%20%2B%20IBX." target="_blank"><div class="s-info"><h4>Mãos + IBX</h4></div><div class="s-price">valor do serviço mãos + 10€<em>→</em></div></a>
+          </div>
+        </div>
+        <div class="s-group">
+          <h3 class="s-group-title">Tooth Gems</h3>
+          <div class="s-grid-small">
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Cristal%20Simples." target="_blank"><span>Cristal Simples</span><b>30€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Cristal%20Forma." target="_blank"><span>Cristal Forma</span><b>35€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Extra%20Simples." target="_blank"><span>Extra Simples</span><b>+10€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Extra%20Forma." target="_blank"><span>Extra Forma</span><b>15€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Flor." target="_blank"><span>Flor</span><b>45€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Borboleta." target="_blank"><span>Borboleta</span><b>50€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Frame." target="_blank"><span>Frame</span><b>60€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Cobertura%20Parcial/Total." target="_blank"><span>Cobertura Parcial/Total</span><b>90€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Ouro." target="_blank"><span>Ouro</span><b>80€</b></a>
+            <a class="s-chip" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Tooth%20Gems%20%E2%80%94%20Opal." target="_blank"><span>Opal</span><b>45€</b></a>
+          </div>
+        </div>
+        <div class="s-group">
+          <h3 class="s-group-title">Pestanas e Sobrancelhas</h3>
+          <div class="s-rows">
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Design%20Sobrancelha." target="_blank"><div class="s-info"><h4>Design Sobrancelha</h4><p>Modelação da sobrancelha com pinça e/ou linha</p></div><div class="s-price">desde 9€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Lifting%20Pestanas." target="_blank"><div class="s-info"><h4>Lifting Pestanas</h4><p>Curvatura natural e duradoura das pestanas</p></div><div class="s-price">desde 30€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Brow%20Lamination." target="_blank"><div class="s-info"><h4>Brow Lamination</h4><p>Alinhamento e fixação dos pelos da sobrancelha</p></div><div class="s-price">desde 30€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Extens%C3%A3o%20de%20Pestanas." target="_blank"><div class="s-info"><h4>Extensão de Pestanas</h4><p>Aplicação de extensões fio a fio</p></div><div class="s-price">desde 20€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Spa%20L%C3%A1bios." target="_blank"><div class="s-info"><h4>Spa Lábios</h4><p>Esfoliação e hidratação dos lábios</p></div><div class="s-price">10€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Spa%20Sobrancelhas." target="_blank"><div class="s-info"><h4>Spa Sobrancelhas</h4><p>Esfoliação e hidratação da zona da sobrancelha</p></div><div class="s-price">10€<em>→</em></div></a>
+            <a class="s-row" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Bu%C3%A7o." target="_blank"><div class="s-info"><h4>Buço</h4><p>Depilação do buço</p></div><div class="s-price">4€<em>→</em></div></a>
+          </div>
+          <div class="s-combos"><span class="s-combos-label">Packs</span>
+            <a class="s-row s-row-combo" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Bu%C3%A7o%20%2B%20Sobrancelha%20com%20Linha." target="_blank"><div class="s-info"><h4>Buço + Sobrancelha com Linha</h4></div><div class="s-price">15€<em>→</em></div></a>
+            <a class="s-row s-row-combo" href="https://wa.me/351910749588?text=Ol%C3%A1%21%20Gostava%20de%20marcar%3A%20Brow%20Lamination%20%2B%20Lifting." target="_blank"><div class="s-info"><h4>Brow Lamination + Lifting</h4></div><div class="s-price">50€<em>→</em></div></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
