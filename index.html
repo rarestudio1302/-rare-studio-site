@@ -91,7 +91,8 @@ header{position:sticky;top:0;z-index:10;background:rgba(251,249,247,.9);backdrop
 /* Feature banner */
 .feature{background:linear-gradient(100deg,var(--blush),var(--cream))}
 .feature .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
-.feature-photo{aspect-ratio:1/1;border-radius:16px;background:linear-gradient(160deg,var(--lilac-deep),var(--blush))}
+.feature-photo{aspect-ratio:1/1;border-radius:16px;background:linear-gradient(160deg,var(--lilac-deep),var(--blush));overflow:hidden}
+.feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .feature h2{font-size:clamp(30px,4vw,42px);font-weight:500;margin:10px 0 12px}
 .feature p{opacity:.8;margin-bottom:26px;max-width:40ch}
 .feature .btns{display:flex;gap:14px;flex-wrap:wrap}
@@ -153,6 +154,10 @@ footer{border-top:1px solid var(--line);padding:44px 0}
       <a href="#formacoes">Formações</a>
       <a href="#sobre">Sobre</a>
       <a href="#contacto">Contacto</a>
+    </div>
+    <div class="socials">
+      <a href="https://instagram.com/rare.studio_" target="_blank" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="TikTok">♪</a>
     </div>
   </nav>
 </header>
@@ -226,8 +231,8 @@ footer{border-top:1px solid var(--line);padding:44px 0}
         <div class="script" style="font-size:15px;max-width:22ch">A tua beleza, nas melhores mãos ♡</div>
       </div>
       <div class="book-grid">
-        <div class="b-card"><div class="b-photo"><img src="catarina.png" alt="Catarina" loading="lazy"></div><div class="b-body"><h3>Agendar Unhas<br>c/ Catarina</h3><a href="https://api.whatsapp.com/send?phone=351910749588" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Agendar →</a></div></div>
-        <div class="b-card"><div class="b-photo"><img src="joana.png" alt="Joana" loading="lazy"></div><div class="b-body"><h3>Agendar Unhas<br>c/ Joana</h3><a href="https://www.instagram.com/beauty_byjoanaisilva/" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Agendar →</a></div></div>
+        <div class="b-card"><div class="b-photo"><img src="catarina.jpg" alt="Catarina" loading="lazy"></div><div class="b-body"><h3>Agendar Unhas<br>c/ Catarina</h3><a href="https://api.whatsapp.com/send?phone=351910749588" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Agendar →</a></div></div>
+        <div class="b-card"><div class="b-photo"><img src="joana.jpg" alt="Joana" loading="lazy"></div><div class="b-body"><h3>Agendar Unhas<br>c/ Joana</h3><a href="https://www.instagram.com/beauty_byjoanaisilva/" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Agendar →</a></div></div>
         <div class="b-card"><div class="b-photo"><img src="soraia.jpg" alt="Soraia" loading="lazy"></div><div class="b-body"><h3>Agendar Lash &amp; Brows<br>c/ Soraia</h3><a href="https://wa.link/l64yk5" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Agendar →</a></div></div>
         <div class="b-card"><div class="b-photo"><img src="emanuel.jpg" alt="Emanuel" loading="lazy"></div><div class="b-body"><h3>Agendar Tooth Gems<br>c/ Emanuel</h3><a href="https://wa.link/2guy8y" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Agendar →</a></div></div>
       </div>
@@ -236,7 +241,7 @@ footer{border-top:1px solid var(--line);padding:44px 0}
 
   <section class="feature">
     <div class="wrap">
-      <div class="feature-photo"></div>
+      <div class="feature-photo"><img src="toothgems.jpg" alt="Tooth Gems — Rare Studio" loading="lazy"></div>
       <div>
         <div class="eyebrow">TOOTH GEMS</div>
         <h2>Tooth Gems</h2>
