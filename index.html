@@ -141,8 +141,8 @@ header{position:sticky;top:0;z-index:10;background:rgba(251,249,247,.9);backdrop
 .about p{max-width:52ch}
 .about h2{font-size:clamp(28px,3.4vw,36px);font-weight:500;margin:10px 0 16px}
 .about p{opacity:.8;margin-bottom:24px;max-width:46ch}
-.about-photo{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,var(--cream),var(--blush));position:relative}
-.about-photo::after{content:"R";position:absolute;bottom:24px;left:24px;font-family:'Fraunces',serif;font-style:italic;font-size:30px;color:var(--lilac-deep);background:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.about-photo{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,var(--cream),var(--blush));position:relative;overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:820px){.about .wrap{grid-template-columns:1fr}.about-photo{order:-1}}
 
 /* Contacto */
@@ -339,7 +339,7 @@ footer{border-top:1px solid var(--line);padding:44px 0}
 
   <section id="sobre" class="about">
     <div class="wrap">
-      <div class="about-photo"></div>
+      <div class="about-photo"><img src="studio.png" alt="Rare Studio — o espaço" loading="lazy"></div>
       <div>
         <div class="eyebrow">SOBRE NÓS</div>
         <h2>Sobre o Rare Studio</h2>
