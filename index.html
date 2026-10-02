@@ -166,6 +166,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(251,249,247,.9);backdrop
 
 footer{border-top:1px solid var(--line);padding:44px 0}
 .f-wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:13.5px}
+.f-link-groups{display:flex;gap:48px;flex-wrap:wrap}
 .f-links{display:flex;gap:22px;opacity:.75}
 .f-bottom{margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;opacity:.55;font-size:12.5px}
 .placeholder{color:var(--lilac-deep)}
@@ -175,7 +176,7 @@ footer{border-top:1px solid var(--line);padding:44px 0}
 
 <header>
   <nav class="nav">
-    <div class="logo">RARE STUDIO<small>STUDIO &amp; ACADEMY</small></div>
+    <a href="#top" style="display:block"><img src="logo_r.png" alt="Rare Studio" style="height:40px;width:auto"></a>
     <button class="menu-toggle" id="menuToggle">&#9776;</button>
     <div class="nav-links" id="navLinks">
       <a href="#top">Início</a>
@@ -184,10 +185,6 @@ footer{border-top:1px solid var(--line);padding:44px 0}
       <a href="#formacoes">Formações</a>
       <a href="#sobre">Sobre</a>
       <a href="#contacto">Contacto</a>
-    </div>
-    <div class="socials">
-      <a href="https://instagram.com/rare.studio_" target="_blank" aria-label="Instagram">◎</a>
-      <a href="#" aria-label="TikTok">♪</a>
     </div>
   </nav>
 </header>
@@ -406,14 +403,17 @@ footer{border-top:1px solid var(--line);padding:44px 0}
   <div class="wrap">
     <div class="f-wrap">
       <div>
-        <img src="logo_rr.png" alt="Rare Studio" style="height:40px;width:auto">
+        <img src="logo_rr.png" alt="Rare Studio" style="height:50px;width:auto">
       </div>
-      <div class="f-links">
-        <a href="https://instagram.com/rare.studio_" target="_blank">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="https://api.whatsapp.com/send?phone=351910749588" target="_blank">Contacta-nos</a>
-        <a href="https://www.livroreclamacoes.pt" target="_blank">Livro de Reclamações</a>
-        <span>R. Barão do Corvo 880 Lj 29, Vila Nova de Gaia</span>
+      <div class="f-link-groups">
+        <div class="f-links">
+          <a href="https://instagram.com/rare.studio_" target="_blank">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+        <div class="f-links">
+          <a href="https://api.whatsapp.com/send?phone=351910749588" target="_blank">Contacta-nos</a>
+          <a href="https://www.livroreclamacoes.pt" target="_blank">Livro de Reclamações</a>
+        </div>
       </div>
     </div>
     <div class="f-bottom">
